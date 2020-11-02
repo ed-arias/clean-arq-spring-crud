@@ -28,4 +28,9 @@ public class InMemoryDataBase implements LivroRepository {
 		return livro;
 	}
 
+	@Override
+	public List<Livro> findAll() {
+		return livros;
+	}
+
 }

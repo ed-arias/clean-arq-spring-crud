@@ -15,13 +15,13 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 @RestController
 @RequestMapping(value = "/livros")
-public class LivroController {
+public class CadastrarLivroApiController {
 	
     private final CadastrarLivroRequester cadastrarLivroRequester;
 	private final CadastrarLivroResponder cadastrarLivroResponder; 
 	
 	@PostMapping
-    public CadastrarLivroResponse salvar(@RequestBody CadastrarLivroRequest cadastrarLivroRequest) {
+    public CadastrarLivroResponse cadastrar(@RequestBody CadastrarLivroRequest cadastrarLivroRequest) {
 
         cadastrarLivroRequester.executar(cadastrarLivroRequest);
 

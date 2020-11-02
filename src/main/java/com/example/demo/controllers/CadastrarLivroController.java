@@ -8,10 +8,9 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class CadastrarLivroController {
 	
-	private final CadastrarLivroRequest cadastrarLivroRequest;
 	private final CadastrarLivroRequester cadastrarLivroRequester;
 	
-	public void executar() {
+	public void executar(CadastrarLivroRequest cadastrarLivroRequest) {
 		cadastrarLivroRequester.executar(cadastrarLivroRequest);
 	}
 }
