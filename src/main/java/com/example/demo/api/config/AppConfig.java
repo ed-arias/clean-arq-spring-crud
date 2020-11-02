@@ -2,15 +2,15 @@ package com.example.demo.api.config;
 
 import java.util.LinkedList;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
 import com.example.demo.data.InMemoryDataBase;
 import com.example.demo.data.LivroRepository;
-import com.example.demo.ports.AdicionarLivroRequester;
-import com.example.demo.ports.AdicionarLivroResponder;
-import com.example.demo.presenters.AdicionarLivroPresenter;
-import com.example.demo.usecases.AdicionarLivroUseCase;
+import com.example.demo.ports.CadastrarLivroRequester;
+import com.example.demo.ports.CadastrarLivroResponder;
+import com.example.demo.presenters.CadastrarLivroPresenter;
+import com.example.demo.usecases.CadastrarLivroUseCase;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class AppConfig {
@@ -21,16 +21,16 @@ public class AppConfig {
 	}
 	
 	@Bean
-	public AdicionarLivroResponder adicionarlivroResponder() {
-		return new AdicionarLivroPresenter();
+	public CadastrarLivroResponder cadastrarlivroResponder() {
+		return new CadastrarLivroPresenter();
 	}
 	
 	@Bean
-	public AdicionarLivroRequester adicionarLivroRequester(
+	public CadastrarLivroRequester cadastrarLivroRequester(
 			LivroRepository livroRepository, 
-			AdicionarLivroResponder adicionarlivroResponder) {
+			CadastrarLivroResponder cadastrarlivroResponder) {
 		
-		return new AdicionarLivroUseCase(livroRepository, adicionarlivroResponder);
+		return new CadastrarLivroUseCase(livroRepository, cadastrarlivroResponder);
 	}
 
 }

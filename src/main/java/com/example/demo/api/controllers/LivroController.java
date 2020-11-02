@@ -1,14 +1,14 @@
 package com.example.demo.api.controllers;
 
+import com.example.demo.dtos.CadastrarLivroRequest;
+import com.example.demo.dtos.CadastrarLivroResponse;
+import com.example.demo.ports.CadastrarLivroRequester;
+import com.example.demo.ports.CadastrarLivroResponder;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.example.demo.dtos.AdicionarLivroRequest;
-import com.example.demo.dtos.AdicionarLivroResponse;
-import com.example.demo.ports.AdicionarLivroRequester;
-import com.example.demo.ports.AdicionarLivroResponder;
 
 import lombok.AllArgsConstructor;
 
@@ -17,23 +17,15 @@ import lombok.AllArgsConstructor;
 @RequestMapping(value = "/livros")
 public class LivroController {
 	
-	private final AdicionarLivroRequester adicionarLivroRequester;
-	private final AdicionarLivroResponder adicionarLivroResponder; 
+    private final CadastrarLivroRequester cadastrarLivroRequester;
+	private final CadastrarLivroResponder cadastrarLivroResponder; 
 	
 	@PostMapping
-    public AdicionarLivroResponse salvar(@RequestBody AdicionarLivroRequest adicionarLivroRequest) {
+    public CadastrarLivroResponse salvar(@RequestBody CadastrarLivroRequest cadastrarLivroRequest) {
 
-        adicionarLivroRequester.executar(adicionarLivroRequest);
+        cadastrarLivroRequester.executar(cadastrarLivroRequest);
 
-        return adicionarLivroResponder.getResponse();
+        return cadastrarLivroResponder.getResponse();
     }
 
 }
-
-
-
-// AdicionarLivroRequest.builder()
-// .autor(adicionarLivroRequest.getAutor())
-// .categoria(adicionarLivroRequest.getCategoria())
-// .titulo(adicionarLivroRequest.getTitulo())
-// .build()

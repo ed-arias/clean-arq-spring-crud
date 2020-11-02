@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class AdicionarLivroRequest {
+public class CadastrarLivroRequest {
 	
 	private String titulo;
 	private Categoria categoria;
