@@ -13,7 +13,7 @@ public class CadastrarLivroPresenter implements CadastrarLivroResponder {
 	CadastrarLivroResponse cadastrarLivroResponse;
 
 	@Override
-	public CadastrarLivroResponse getResponse() {
+	public CadastrarLivroResponse obterResposta() {
 		return cadastrarLivroResponse;
 	}
 

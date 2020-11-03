@@ -6,7 +6,7 @@ import com.example.demo.dtos.ListarLivrosResponse;
 
 public interface ListarLivrosResponder {
 
-    List<ListarLivrosResponse> obterRespose();
+    List<ListarLivrosResponse> obterResposta();
 	void presentar(List<ListarLivrosResponse> listarLivrosResponse);
 
 }

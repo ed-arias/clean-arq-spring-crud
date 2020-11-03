@@ -27,7 +27,7 @@ public class ListarLivrosApiController {
 
         listarLivrosRequester.executar(listarLivrosRequest);
 
-        return listarLivrosResponder.obterRespose();
+        return listarLivrosResponder.obterResposta();
     }
     
 }

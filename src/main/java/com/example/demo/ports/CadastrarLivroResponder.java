@@ -4,7 +4,7 @@ import com.example.demo.dtos.CadastrarLivroResponse;
 
 public interface CadastrarLivroResponder {
 
-	CadastrarLivroResponse getResponse();
+	CadastrarLivroResponse obterResposta();
 	void presentar(CadastrarLivroResponse cadastrarLivroResponse);
 
 }

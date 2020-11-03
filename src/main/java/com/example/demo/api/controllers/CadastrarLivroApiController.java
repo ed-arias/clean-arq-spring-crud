@@ -25,7 +25,7 @@ public class CadastrarLivroApiController {
 
         cadastrarLivroRequester.executar(cadastrarLivroRequest);
 
-        return cadastrarLivroResponder.getResponse();
+        return cadastrarLivroResponder.obterResposta();
     }
 
 }

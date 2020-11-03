@@ -15,7 +15,7 @@ public class ListarLivrosPresenter implements ListarLivrosResponder {
     private List<ListarLivrosResponse> listarLivrosResponse;
 
     @Override
-    public List<ListarLivrosResponse> obterRespose() {
+    public List<ListarLivrosResponse> obterResposta() {
         return this.listarLivrosResponse;
     }
 
@@ -24,5 +24,5 @@ public class ListarLivrosPresenter implements ListarLivrosResponder {
         this.listarLivrosResponse = listarLivrosResponse;
 
     }
-    
+
 }
