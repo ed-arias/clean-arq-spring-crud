@@ -3,17 +3,17 @@ package com.example.demo;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.example.demo.biblioteca.data.InMemoryDataBase;
+import com.example.demo.biblioteca.data.LivroRepository;
+import com.example.demo.biblioteca.dtos.CadastrarLivroRequest;
+import com.example.demo.biblioteca.dtos.CadastrarLivroResponse;
+import com.example.demo.biblioteca.entities.Livro;
+import com.example.demo.biblioteca.entities.enums.Categoria;
+import com.example.demo.biblioteca.ports.CadastrarLivroRequester;
+import com.example.demo.biblioteca.ports.CadastrarLivroResponder;
+import com.example.demo.biblioteca.usecases.CadastrarLivroUseCase;
 import com.example.demo.controllers.CadastrarLivroController;
-import com.example.demo.data.InMemoryDataBase;
-import com.example.demo.data.LivroRepository;
-import com.example.demo.dtos.CadastrarLivroRequest;
-import com.example.demo.dtos.CadastrarLivroResponse;
-import com.example.demo.entities.Livro;
-import com.example.demo.entities.enums.Categoria;
-import com.example.demo.ports.CadastrarLivroRequester;
-import com.example.demo.ports.CadastrarLivroResponder;
 import com.example.demo.presenters.CadastrarLivroPresenter;
-import com.example.demo.usecases.CadastrarLivroUseCase;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -41,8 +41,7 @@ public class DemoApplication {
 		log.info(cadastrarLivroRequest.toString());
 
 		cadastrarLivroController.executar(cadastrarLivroRequest);
-
-		CadastrarLivroResponse cadastrarLivroResponse = cadastrarlivroResponder.obterResposta();
+		CadastrarLivroResponse cadastrarLivroResponse = cadastrarlivroResponder.presentar();
 
 		log.info(cadastrarLivroResponse.toString());
 		

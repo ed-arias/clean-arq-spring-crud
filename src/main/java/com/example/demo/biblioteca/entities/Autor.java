@@ -1,11 +1,11 @@
-package com.example.demo.entities;
+package com.example.demo.biblioteca.entities;
 
 import java.util.List;
 
 import lombok.Data;
 
 @Data
-public class Autor {
+class Autor {
 
 	private final Long id;
 	private final String nombre;

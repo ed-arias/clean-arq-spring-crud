@@ -1,8 +1,8 @@
-package com.example.demo.entities;
+package com.example.demo.biblioteca.entities;
 
 import java.time.LocalDateTime;
 
-import com.example.demo.entities.enums.Categoria;
+import com.example.demo.biblioteca.entities.enums.Categoria;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,7 +11,8 @@ import lombok.Data;
 @Data
 @Builder
 @AllArgsConstructor
-public class Livro {
+public
+class Livro {
 
 	private final Long id;
 	private final String titulo;

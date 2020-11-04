@@ -2,8 +2,8 @@ package com.example.demo.presenters;
 
 import java.util.List;
 
-import com.example.demo.dtos.ListarLivrosResponse;
-import com.example.demo.ports.ListarLivrosResponder;
+import com.example.demo.biblioteca.dtos.ListarLivrosResponse;
+import com.example.demo.biblioteca.ports.ListarLivrosResponder;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -15,13 +15,13 @@ public class ListarLivrosPresenter implements ListarLivrosResponder {
     private List<ListarLivrosResponse> listarLivrosResponse;
 
     @Override
-    public List<ListarLivrosResponse> obterResposta() {
-        return this.listarLivrosResponse;
+    public void obterResposta(List<ListarLivrosResponse> listarLivrosResponse) {
+        this.listarLivrosResponse = listarLivrosResponse;
     }
 
     @Override
-    public void presentar(List<ListarLivrosResponse> listarLivrosResponse) {
-        this.listarLivrosResponse = listarLivrosResponse;
+    public List<ListarLivrosResponse> presentar() {
+        return this.listarLivrosResponse;
 
     }
 

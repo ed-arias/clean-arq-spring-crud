@@ -1,8 +1,8 @@
-package com.example.demo.dtos;
+package com.example.demo.biblioteca.dtos;
 
 import java.time.LocalDateTime;
 
-import com.example.demo.entities.enums.Categoria;
+import com.example.demo.biblioteca.entities.enums.Categoria;
 
 import lombok.Builder;
 import lombok.Data;

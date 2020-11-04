@@ -1,9 +1,9 @@
-package com.example.demo.data;
+package com.example.demo.biblioteca.data;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-import com.example.demo.entities.Livro;
+import com.example.demo.biblioteca.entities.Livro;
 
 import lombok.AllArgsConstructor;
 

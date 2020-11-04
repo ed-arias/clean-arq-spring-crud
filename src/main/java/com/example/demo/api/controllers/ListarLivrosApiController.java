@@ -2,10 +2,10 @@ package com.example.demo.api.controllers;
 
 import java.util.List;
 
-import com.example.demo.dtos.ListarLivrosRequest;
-import com.example.demo.dtos.ListarLivrosResponse;
-import com.example.demo.ports.ListarLivrosRequester;
-import com.example.demo.ports.ListarLivrosResponder;
+import com.example.demo.biblioteca.dtos.ListarLivrosRequest;
+import com.example.demo.biblioteca.dtos.ListarLivrosResponse;
+import com.example.demo.biblioteca.ports.ListarLivrosRequester;
+import com.example.demo.biblioteca.ports.ListarLivrosResponder;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,7 +27,7 @@ public class ListarLivrosApiController {
 
         listarLivrosRequester.executar(listarLivrosRequest);
 
-        return listarLivrosResponder.obterResposta();
+        return listarLivrosResponder.presentar();
     }
     
 }

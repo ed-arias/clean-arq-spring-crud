@@ -1,13 +1,13 @@
-package com.example.demo.usecases;
+package com.example.demo.biblioteca.usecases;
 
 import java.time.LocalDateTime;
 
-import com.example.demo.data.LivroRepository;
-import com.example.demo.dtos.CadastrarLivroRequest;
-import com.example.demo.dtos.CadastrarLivroResponse;
-import com.example.demo.entities.Livro;
-import com.example.demo.ports.CadastrarLivroRequester;
-import com.example.demo.ports.CadastrarLivroResponder;
+import com.example.demo.biblioteca.data.LivroRepository;
+import com.example.demo.biblioteca.dtos.CadastrarLivroRequest;
+import com.example.demo.biblioteca.dtos.CadastrarLivroResponse;
+import com.example.demo.biblioteca.entities.Livro;
+import com.example.demo.biblioteca.ports.CadastrarLivroRequester;
+import com.example.demo.biblioteca.ports.CadastrarLivroResponder;
 
 import lombok.AllArgsConstructor;
 
@@ -25,7 +25,7 @@ public class CadastrarLivroUseCase implements CadastrarLivroRequester {
 		
 		CadastrarLivroResponse cadastrarLivroResponse = toCadastrarLivroResponseFrom(livro);
 		
-		cadastrarlivroResponder.presentar(cadastrarLivroResponse);
+		cadastrarlivroResponder.obterResposta(cadastrarLivroResponse);
 		
 	}
 	

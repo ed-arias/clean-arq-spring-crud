@@ -1,7 +1,7 @@
 package com.example.demo.controllers;
 
-import com.example.demo.dtos.ListarLivrosRequest;
-import com.example.demo.ports.ListarLivrosRequester;
+import com.example.demo.biblioteca.dtos.ListarLivrosRequest;
+import com.example.demo.biblioteca.ports.ListarLivrosRequester;
 
 import lombok.AllArgsConstructor;
 

@@ -1,4 +1,4 @@
-package com.example.demo.entities.enums;
+package com.example.demo.biblioteca.entities.enums;
 
 public enum Categoria {
 	

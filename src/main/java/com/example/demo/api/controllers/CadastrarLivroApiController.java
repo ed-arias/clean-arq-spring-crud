@@ -1,9 +1,9 @@
 package com.example.demo.api.controllers;
 
-import com.example.demo.dtos.CadastrarLivroRequest;
-import com.example.demo.dtos.CadastrarLivroResponse;
-import com.example.demo.ports.CadastrarLivroRequester;
-import com.example.demo.ports.CadastrarLivroResponder;
+import com.example.demo.biblioteca.dtos.CadastrarLivroRequest;
+import com.example.demo.biblioteca.dtos.CadastrarLivroResponse;
+import com.example.demo.biblioteca.ports.CadastrarLivroRequester;
+import com.example.demo.biblioteca.ports.CadastrarLivroResponder;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,7 +25,7 @@ public class CadastrarLivroApiController {
 
         cadastrarLivroRequester.executar(cadastrarLivroRequest);
 
-        return cadastrarLivroResponder.obterResposta();
+        return cadastrarLivroResponder.presentar();
     }
 
 }

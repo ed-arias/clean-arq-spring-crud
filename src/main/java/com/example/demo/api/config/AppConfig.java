@@ -2,16 +2,16 @@ package com.example.demo.api.config;
 
 import java.util.LinkedList;
 
-import com.example.demo.data.InMemoryDataBase;
-import com.example.demo.data.LivroRepository;
-import com.example.demo.ports.CadastrarLivroRequester;
-import com.example.demo.ports.CadastrarLivroResponder;
-import com.example.demo.ports.ListarLivrosRequester;
-import com.example.demo.ports.ListarLivrosResponder;
+import com.example.demo.biblioteca.data.InMemoryDataBase;
+import com.example.demo.biblioteca.data.LivroRepository;
+import com.example.demo.biblioteca.ports.CadastrarLivroRequester;
+import com.example.demo.biblioteca.ports.CadastrarLivroResponder;
+import com.example.demo.biblioteca.ports.ListarLivrosRequester;
+import com.example.demo.biblioteca.ports.ListarLivrosResponder;
+import com.example.demo.biblioteca.usecases.CadastrarLivroUseCase;
+import com.example.demo.biblioteca.usecases.ListarLivrosUseCase;
 import com.example.demo.presenters.CadastrarLivroPresenter;
 import com.example.demo.presenters.ListarLivrosPresenter;
-import com.example.demo.usecases.CadastrarLivroUseCase;
-import com.example.demo.usecases.ListarLivrosUseCase;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
